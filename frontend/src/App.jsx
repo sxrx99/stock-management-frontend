@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import ProductList from './components/ProductList';
 
- function App() {
+function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900">
-      <div className="bg-red-600 text-white p-10 rounded-xl shadow-lg text-xl font-bold">
-        Tailwind is working!
-      </div>
+    <div className="min-h-screen flex-col justify-center">
+      <h1 className="text-3xl font-bold text-center my-6">Stock management</h1>
+      <ProductList />
     </div>
-  )
+  );
 }
 
-export default App ; 
+export default App;

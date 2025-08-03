@@ -35,48 +35,53 @@ export default function EditProductModal({ product, onClose, onSave }) {
     <div className="fixed inset-0 z-50 backdrop-blur-sm bg-white/30 overflow-y-auto flex justify-center items-center">
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-xl p-6 w-full max-w-md space-y-4 shadow-xl"
+        className="bg-white rounded-xl p-6 w-full max-w-md space-y-4 shadow-xl text-[#021024]"
       >
-        <h2 className="text-xl font-semibold text-gray-800">Edit Product</h2>
+        <h2 className="text-xl font-semibold">Edit Product</h2>
+
         <input
           type="text"
           placeholder="Name"
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-[#021024]"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
+
         <input
           type="number"
           placeholder="Price"
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-[#021024]"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           required
         />
+
         <textarea
           placeholder="Description"
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-[#021024]"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
+
         <input
           type="file"
           accept="image/*"
-          className="w-full"
+          className="w-full text-[#021024]"
           onChange={(e) => setImage(e.target.files[0])}
         />
+
         <div className="flex justify-end gap-2">
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+            className="px-4 py-2 bg-gray-200 text-[#021024] rounded hover:bg-gray-300"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            className="px-4 py-2 bg-[#00B2FF] text-white rounded hover:bg-[#0099dd]"
           >
             Save Changes
           </button>

@@ -29,7 +29,7 @@ export default function ProductList() {
     try {
       await axios.delete(`http://localhost:8000/products/${productToDelete.id}/`);
       setProducts(prev => prev.filter(p => p.id !== productToDelete.id));
-      setProductToDelete(null); // close modal
+      setProductToDelete(null); 
     } catch (err) {
       console.error('Delete failed:', err);
     }
@@ -67,7 +67,7 @@ export default function ProductList() {
           <ProductCard
             key={product.id}
             product={product}
-            onDelete={() => setProductToDelete(product)} // NEW
+            onDelete={() => setProductToDelete(product)} 
             onModify={() => handleModify(product)}
           />
         ))}
